@@ -31,14 +31,21 @@ function signup(){
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
     'Authorization': `Bearer ${token}`
+    
   },
 })
 .then ( response => {
   if(response.ok){
-    localStorage.setItem('token', response.token)
-    window.location.href = '../index.html';
+   
+    return response.json() 
   }
+    return;
   
+})
+.then(response => {
+  localStorage.setItem('token', response.token)
+  window.location.href = '../index.html';
+  return
 })
 .catch(err => console.error('Виникла помилка під час виконання запиту:', err))
 }
