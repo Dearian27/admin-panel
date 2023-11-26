@@ -9,6 +9,8 @@
     redirection
 */
 
+
+
 document.onload = function() {
   if(!localStorage.getItem('user')) {
     window.location.href = '/';
