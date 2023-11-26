@@ -28,10 +28,10 @@ if(!accountName.value || !accountEmail.value || !accountPassword.value){
 }
 
 if(accountPassword.value !== accountRepeatPassword.value){
-  console.warn("Паролі не однакові")
+  console.warn("Паролі не співпадають")
   return;
 }
-  console.log("sadfads")
+  const token = localStorage.getItem('token');
   fetch("http://localhost:8080/api/auth/signup/", {
   method: 'POST',
   body: JSON.stringify({
