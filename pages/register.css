@@ -1,0 +1,76 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.h1 {
+  margin: 25px;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.input-wrapper {
+  padding: 12px 0;
+  position: relative;
+}
+.input {
+  border: 1px solid #ececec;
+  box-shadow: 0 0 4px #f0f0f0;
+  font-size: 22px;
+  padding: 18px 22px;
+  width: 540px;
+  transition: 0.3s ease-out;
+  outline: none;
+}
+.input:focus {
+  border-color: #dcdcdc;
+  box-shadow: 0 0 3px #d7d7d7;
+}
+.input::placeholder {
+  color: #dcdcdc;
+}
+.inputIcon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button {
+  width: 540px;
+  margin: 35px 0;
+  padding: 20px 150px;
+  color: white;
+  background: linear-gradient(-40deg, #6bffeb, #b689ff);
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  outline-offset: -5px;
+  outline-color: #ffffff;
+}
+.h3 {
+  color: black;
+  font-weight: 400;
+}
+.styledLink {
+  font-weight: 800;
+  /* color: black; */
+  color: #b689ff;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
