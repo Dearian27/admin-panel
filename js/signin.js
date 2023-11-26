@@ -35,16 +35,17 @@ function signin(){
   })
   .then ( response => {
     if(response.ok){
-    //  window.location.href = '../index.html';
+     
       return response.json() 
     }
       return;
     
   })
   .then(response => {
-    console.log(response.token)
+    localStorage.setItem('token', response.token)
+    window.location.href = '../index.html';
+    return
   })
-
   .catch(err => console.error('Виникла помилка під час виконання запиту:', err))
 
    
