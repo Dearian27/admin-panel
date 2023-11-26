@@ -8,19 +8,19 @@
 </head>
 <body>
   <main class="container">
-    <form class="form" onsubmit="submitHandler">
+    <form class="form">
       <h1 class="h1">Create account✨</h1>
       <label class="input-wrapper">
-        <input class="input" placeholder="name" type="text" />
+        <input id="name" class="input" placeholder="name" type="text" />
       </label>
       <label class="input-wrapper">
-        <input class="input" placeholder="email" type="text" />
+        <input id="email" class="input" placeholder="email" type="text" />
       </label>
       <label class="input-wrapper">
-        <input class="input" placeholder="password" type="password" />
+        <input id="password" class="input" placeholder="password" type="password" />
       </label>
       <label class="input-wrapper">
-        <input class="input" placeholder="repeat your password" type="password"/>
+        <input id="repeat_password" class="input" placeholder="repeat your password" type="password"/>
       </label>
       <button class="button" type="submit">Sign up</button>
       <h3 class="h3">
@@ -31,6 +31,6 @@
       </h3>
     </form>
   </main>
-
+<script src="../js/signup.js"></script>
 </body>
 </html>
