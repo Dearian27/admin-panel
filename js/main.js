@@ -1,26 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-  function showContent(route) {
-    const sections = document.querySelectorAll('.container section');
-    console.log(sections)
-    sections.forEach(section => {
-      const sectionRoute = section.getAttribute('data-route');
-      console.log(sectionRoute, route);
-      if (sectionRoute === route) {
-        section.style.display = 'block';
-      } else {
-        section.style.display = 'none';
-      }
-    });
-  }
+localStorage.getItem('token')
+function hiddenBtn(){
+  fetch('http://localhost:8080/api/users/check')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+}
 
-  window.addEventListener('popstate', function(event) {
-    event.preventDefault();
-    const route = window.location.pathname;
-    showContent(route);
-  });
 
-  const initialRoute = window.location.pathname;
-  console.log(initialRoute)
-  showContent(initialRoute);
-});
 
