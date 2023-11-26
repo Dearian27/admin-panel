@@ -22,6 +22,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 function signup(){
   const token = window.localStorage.getItem('token');
+  
 if(!accountName.value || !accountEmail.value || !accountPassword.value){
   console.warn("Заповніть всі поля");
   return;
