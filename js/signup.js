@@ -22,16 +22,16 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 function signup(){
   const token = window.localStorage.getItem('token');
-if(!accountName.value || !accountEmail.value || !accountPassword.value){
-  console.warn("Заповніть всі поля");
-  return;
-}
+  if(!accountName.value || !accountEmail.value || !accountPassword.value){
+    console.warn("Заповніть всі поля");
+    return;
+  }
 
-if(accountPassword.value !== accountRepeatPassword.value){
-  console.warn("Паролі не співпадають")
-  return;
-}
-  const token = localStorage.getItem('token');
+  if(accountPassword.value !== accountRepeatPassword.value){
+    console.warn("Паролі не співпадають")
+    return;
+  }
+  
   fetch("http://localhost:8080/api/auth/signup/", {
   method: 'POST',
   body: JSON.stringify({
