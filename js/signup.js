@@ -21,7 +21,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 })
 
 function signup(){
-
+  const token = window.localStorage.getItem('token');
 if(!accountName.value || !accountEmail.value || !accountPassword.value){
   console.warn("Заповніть всі поля");
   return;
@@ -44,10 +44,12 @@ if(accountPassword.value !== accountRepeatPassword.value){
     'Authorization': `Bearer ${token}`
   },
 })
-.then ( response => {return response.json()})
-.then (response => {
-  localStorage.setItem('token', response.token)
-  window.location.href = '../index.html';
+.then ( response => {
+  if(response.ok){
+    localStorage.setItem('token', response.token)
+    window.location.href = '../index.html';
+  }
+  
 })
 .catch(err => console.error('Виникла помилка під час виконання запиту:', err))
 }
